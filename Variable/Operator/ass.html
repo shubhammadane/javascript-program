@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment Operators in JavaScript</title>
+
+  <!-- CSS Styling -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fa;
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    table {
+      width: 60%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background-color: #fff;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px 18px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #e0f7fa;
+    }
+
+    .output {
+      width: 60%;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .line {
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .op {
+      color: #0055aa;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Assignment Operators in JavaScript</h2>
+
+  <!-- Table showing the operators -->
+  <table>
+    <thead>
+      <tr>
+        <th>Operator</th>
+        <th>Description</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>=</td>
+        <td>Assign</td>
+        <td>x = 10</td>
+      </tr>
+      <tr>
+        <td>+=</td>
+        <td>Add and assign</td>
+        <td>x += 5 → x = x + 5</td>
+      </tr>
+      <tr>
+        <td>-=</td>
+        <td>Subtract and assign</td>
+        <td>x -= 3</td>
+      </tr>
+      <tr>
+        <td>*=</td>
+        <td>Multiply and assign</td>
+        <td>x *= 2</td>
+      </tr>
+      <tr>
+        <td>/=</td>
+        <td>Divide and assign</td>
+        <td>x /= 4</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Output from JavaScript -->
+  <div class="output" id="result"></div>
+
+  <script>
+    let output = "";
+    let x = 10;
+    output += `<div class='line'><span class='op'>Initial:</span> x = ${x}</div>`;
+
+    x += 5;
+    output += `<div class='line'><span class='op'>x += 5:</span> x = ${x}</div>`;
+
+    x -= 3;
+    output += `<div class='line'><span class='op'>x -= 3:</span> x = ${x}</div>`;
+
+    x *= 2;
+    output += `<div class='line'><span class='op'>x *= 2:</span> x = ${x}</div>`;
+
+    x /= 4;
+    output += `<div class='line'><span class='op'>x /= 4:</span> x = ${x}</div>`;
+
+    // Display all results in the styled div
+    document.getElementById("result").innerHTML = output;
+  </script>
+
+</body>
+</html>
